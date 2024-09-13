@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <stdlib.h>
+//*
+
+// *
+//***
+// *
+
+//  *
+// ***
+//*****
+// ***
+//  *
+
+//    *
+//   ***
+//  *****
+// *******
+//*********
+// *******
+//  *****
+//   ***
+//    *
+
+int main()
+{
+	int i,n,j;  
+	scanf("%d",&n);
+	
+	for(i=0;i<n;i++)
+	{
+		for(j=0;j<n-1-i;j++)
+			printf(" ");
+		for(j=0;j<2*i+1;j++)
+			printf("*");	
+		
+	printf("\n");
+	}
+	for(i=n-2;i>=0;i--)
+	{
+		for(j=0;j<n-1-i;j++)
+			printf(" ");
+		for(j=0;j<2*i+1;j++)
+			printf("*");	
+		
+	printf("\n");
+	}
+	
+		
+}
+
+/*
+// eger iki sayi aralarinda asalsa 1 döner
+// deðilse 0 döner
+int aralarinda_asal(int a,int b)
+{
+	int i;
+	int temp=0; 
+	for(i=2;i<=a&&i<=b;i++)
+		if(a%i==0&&b%i==0)
+			return 0;
+	return 1; 
+}
+
+int asal(int a)
+{
+	int i; 
+	for(i=2;i<a;i++){
+		if(a%i==0)
+			return 0;}
+	return 1;
+}
+
+
+int ekok(int a, int b)
+{
+	int i; 
+	for(i=2;;i++)
+		if(i%a==0&&i%b==0)
+			return i;
+}
+
+int ebob(int a, int b)
+{
+	int i;
+	int eb;  
+	for(i=1;i<=a&&i<=b;i++)
+		if(a%i==0&&b%i==0)
+			eb = i;
+	return eb; 		
+}
+
+
+int main()
+{
+	int x,y; 
+	scanf("%d %d",&x,&y);
+	if(aralarinda_asal(x,y))
+	printf("%d ve %d aralarinda asal.\n",x,y);
+	else 
+	printf("%d ve %d aralarinda asal degildir.\n",x,y);
+	
+	printf("ekok(%d,%d) = %d",x,y,ekok(x,y));
+	printf("ebob(%d,%d) = %d",x,y,ebob(x,y));
+	
+}
+*/
+/*
+int compute_sum(int n)
+{
+	int total=0; 
+	for(n;n>0;n--)
+		total+=n; 
+	printf("n in compute_sum %d\n",n);
+	return total; 
+}
+
+int main()
+{
+	int n=5; 
+	printf("Sum : %d\n",compute_sum(n));
+	printf("n in main: %d\n",n);
+}
+
+*/
+/*
+int artik_yil(int);
+
+int main() {
+	int i; 
+	for(i=1600;i<=2000;i++)
+		if(artik_yil(i))
+			printf("%d artik yildir.\n",i);
+		else 
+			printf("%d artik yil degildir.\n",i);
+	return 0;
+}
+
+
+int artik_yil(int yil)
+{
+	return ((yil%4==0)&&(yil%100!=0))||(yil%400==0);
+}
+*/
+

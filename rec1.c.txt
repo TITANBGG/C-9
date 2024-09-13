@@ -1,0 +1,98 @@
+#include <stdio.h>
+// 0 1 2 3 4 5  6  7  8 ... 
+// 1 1 2 3 5 8 13 21 34 ...
+
+//            x*fact(x-1)   deðilse
+// fact(x) =  1             x==0 || x==1
+//            
+//            fibo(x-1) + fibo(x-2)  deðilse
+// fibo(x) =  
+//            1                      x==0 || x==1
+//
+
+
+// 
+// 4000 adým attým. Her gün bir önceki günün
+// yüzde 10 fazlasýný atacaðým. girilen n deðeri için
+// kaç adým atmam gerektiðini yazan programý yazýnýz!
+
+
+//
+// f(0)= 2, f(1)=5 veriliyor.
+// f(x)=f(x-1)*2+f(x-2)/2 ise verilen x deðerine göre
+// f(x) i bulan programý özyinelemeli ve özyinelemesiz yazýnýz.  
+//
+
+//
+// 1 ayda cocuk 1 kitap okumuþtur. 
+// Bu cocuk ailesine her ay bir önceki ayýn 4 katýndan 
+// 2 eksik kitap okuyacaðýna söz vermiþtir. 
+// Girilen aya göre cocuðun okuyacaðý kitap sayýsýný ekrana
+// yazan programý yazýnýz. 
+
+int kitap_say(int ay)
+{
+	if(ay==1) return 1; 
+	return kitap_say(ay-1)*4-2;
+}
+
+
+int f(int x)
+{
+	if(x==0) return 2; 
+	if(x==1) return 5;
+	return f(x-1)*2+f(x-2)/2;
+}
+
+
+int adimsay(int i)
+{
+	if(i==0) return 4000;
+	return adimsay(i-1)*1.1;
+}
+
+int main()
+{
+	int i; 
+	for(i=1;i<=12;i++)
+	printf("%d ay %d kitap okumalisin!\n",i,kitap_say(i));
+}
+
+
+
+
+
+/*
+int fibo(int x)
+{
+	if(x==0 || x==1)
+	return 1; 
+	return fibo(x-1) + fibo(x-2);
+}
+
+int main()
+{
+	int i;
+	for(i=0;i<=1000;i++)
+	{
+		printf("%d \n",fibo(i));
+	}
+}
+*/
+
+/*
+int fact(int i)
+{
+	//printf("%d degeri icin cagirdim!\n",i);
+    if (i == 0 || i == 1)
+        return 1;
+    return i * fact(i - 1);
+}
+int main()
+{
+	int i=10;
+	for(i=0;i<1000;i++)
+    printf("%d \n",fact(i));
+    
+}
+*/
